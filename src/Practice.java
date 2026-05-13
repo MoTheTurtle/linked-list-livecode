@@ -27,7 +27,7 @@ public class Practice {
         //printList(coolNode);
         //System.out.println(countX(coolNode));
 
-        ListNode newHead = removeAt(coolNode, 2);
+        ListNode newHead = removeAt(coolNode, 0);
         printList(newHead); 
 
     }
@@ -63,6 +63,9 @@ public class Practice {
 //removeIndex 2
 //
     public static ListNode removeAt(ListNode head, int removeIndex){
+        if(removeIndex==0){
+            return head.next;
+        }
         ListNode current = head; 
         for(int i=0; i < removeIndex - 1 ;i++){
             current = current.next;
