@@ -24,8 +24,12 @@ public class Practice {
         hello.data = 'x';
         extra.next = hello;
         
-        printList(coolNode);
-        System.out.println(countX(coolNode));
+        //printList(coolNode);
+        //System.out.println(countX(coolNode));
+
+        ListNode newHead = removeAt(coolNode, 2);
+        printList(newHead); 
+        
     }
 
     public static void printList(ListNode head) {
@@ -50,5 +54,21 @@ public class Practice {
         }
 
         return xCount;
+    
+    }
+
+//remove the node at removeIndex, and return the head of the list. 
+//example:
+//e -> t -> k -> y 
+//removeIndex 2
+//
+    public static ListNode removeAt(ListNode head, int removeIndex){
+        ListNode current = head; 
+        for(int i=0; i < removeIndex - 1 ;i++){
+            current = current.next;
+        }
+        current.next = current.next.next;
+
+    return head; 
     }
 }
