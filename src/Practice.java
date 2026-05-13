@@ -29,7 +29,7 @@ public class Practice {
 
         ListNode newHead = removeAt(coolNode, 2);
         printList(newHead); 
-        
+
     }
 
     public static void printList(ListNode head) {
@@ -59,7 +59,7 @@ public class Practice {
 
 //remove the node at removeIndex, and return the head of the list. 
 //example:
-//e -> t -> k -> y 
+//e -> t -> k -> y -z
 //removeIndex 2
 //
     public static ListNode removeAt(ListNode head, int removeIndex){
